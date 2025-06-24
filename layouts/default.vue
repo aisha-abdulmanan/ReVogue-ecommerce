@@ -7,7 +7,7 @@
         <div class="flex gap-6">
           <li><NuxtLink to="/" class="hover:underline">Home</NuxtLink></li>
           <li><NuxtLink to="/product" class="hover:underline">Shop</NuxtLink></li>
-          <li><NuxtLink to="/about" class="hover:underline">About</NuxtLink></li>
+          <li><NuxtLink to="/about" class="hover:underline">About Us</NuxtLink></li>
           <li><NuxtLink to="/orders" class="hover:underline">Orders</NuxtLink></li>
           <li><NuxtLink to="/profile" class="hover:underline">Profile</NuxtLink></li>
         </div>
