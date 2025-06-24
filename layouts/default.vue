@@ -1,0 +1,28 @@
+<template>
+  <div>
+    <nav class="bg-purple-700 text-white px-6 py-4 shadow-md">
+      <ul class="flex justify-between items-center text-lg font-semibold">
+        <!-- Left side nav links -->
+        <div class="flex gap-6">
+          <li><NuxtLink to="/" class="hover:underline">Home</NuxtLink></li>
+          <li><NuxtLink to="/product" class="hover:underline">Shop</NuxtLink></li>
+          <li><NuxtLink to="/about" class="hover:underline">About</NuxtLink></li>
+          <li><NuxtLink to="/orders" class="hover:underline">Orders</NuxtLink></li>
+          <li><NuxtLink to="/profile" class="hover:underline">Profile</NuxtLink></li>
+        </div>
+
+        <!-- Right side nav links -->
+        <div class="flex gap-6">
+          <li><NuxtLink to="/login" class="hover:underline">Login</NuxtLink></li>
+          <li><NuxtLink to="/cart" class="hover:underline">Cart</NuxtLink></li>
+          <li><NuxtLink to="/support" class="hover:underline">Support</NuxtLink></li>
+        </div>
+      </ul>
+    </nav>
+
+    <main class="px-4 py-8">
+      <NuxtRouteAnnouncer />   <!-- Adds accessibility support for route changes -->
+      <NuxtPage />
+    </main>
+  </div>
+</template>
