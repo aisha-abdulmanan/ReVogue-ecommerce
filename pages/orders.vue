@@ -1,4 +1,8 @@
 <template>
+
   <!-- Orders Page -->
-  <div class="p-4 text-lg font-bold"> 📋Welcome to the Orders Page </div>
+  <CardWrapper>
+    <h class="text-4xl font-bold text-purple-900"> 📋 Your Orders </h>
+  </CardWrapper>
+
 </template>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- NAVIGATION BAR -->
     <nav class="bg-purple-700 text-white px-6 py-4 shadow-md">
       <ul class="flex justify-between items-center text-lg font-semibold">
         <!-- Left side nav links -->
@@ -15,7 +16,7 @@
         <div class="flex gap-6">
           <li><NuxtLink to="/login" class="hover:underline">Login</NuxtLink></li>
           <li><NuxtLink to="/cart" class="hover:underline">Cart</NuxtLink></li>
-          <li><NuxtLink to="/support" class="hover:underline">Support</NuxtLink></li>
+          <li><NuxtLink to="/customer-service" class="hover:underline">Support</NuxtLink></li>
         </div>
       </ul>
     </nav>

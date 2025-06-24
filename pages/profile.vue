@@ -1,4 +1,8 @@
 <template>
+
   <!-- Profile Page -->
-  <div class="p-4 text-lg font-bold"> 👤Welcome to your Profile Page </div>
+  <CardWrapper>
+    <h class="text-4xl font-bold text-purple-900"> 👤 Your Profile </h>
+  </CardWrapper>
+
 </template>
