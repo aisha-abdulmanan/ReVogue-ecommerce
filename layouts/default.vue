@@ -8,14 +8,15 @@
           <li><NuxtLink to="/" class="hover:underline">Home</NuxtLink></li>
           <li><NuxtLink to="/product" class="hover:underline">Shop</NuxtLink></li>
           <li><NuxtLink to="/about" class="hover:underline">About Us</NuxtLink></li>
-          <li><NuxtLink to="/orders" class="hover:underline">Orders</NuxtLink></li>
-          <li><NuxtLink to="/profile" class="hover:underline">Profile</NuxtLink></li>
+          
         </div>
 
         <!-- Right side nav links -->
         <div class="flex gap-6">
           <li><NuxtLink to="/login" class="hover:underline">Login</NuxtLink></li>
+          <li><NuxtLink to="/profile" class="hover:underline">Profile</NuxtLink></li>
           <li><NuxtLink to="/cart" class="hover:underline">Cart</NuxtLink></li>
+          <li><NuxtLink to="/orders" class="hover:underline">Orders</NuxtLink></li>
           <li><NuxtLink to="/customer-service" class="hover:underline">Support</NuxtLink></li>
         </div>
       </ul>
