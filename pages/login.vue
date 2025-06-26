@@ -1,19 +1,18 @@
 <template>
-  
-  <CardWrapper>
-  <!-- Login Page -->
-    <p class="text-4xl font-bold text-purple-900"> 👤Login Page </p>
-    <p class="mt-4 text-xl text-gray-700"> This page allows you to log in or sign up for account. </p>
-  </CardWrapper>
-
-  <div class="min-h-screen bg-purple-100 flex items-center justify-center">
-    <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-sm">
-      <p class="text-3xl font-bold text-purple-800 mb-6 text-center"> Login to ReVogue </p>
+  <!-- Fullscreen background -->
+  <div class="min-h-screen bg-purple-100 flex items-center justify-center px-4">
+    
+    <!-- Login Card -->
+    <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-sm">
+      <h1 class="text-4xl font-bold text-purple-800 text-center mb-2">👤 Login </h1>
+      <p class="text-center text-gray-600 mb-6">
+        Log in or sign up for your ReVogue account.
+      </p>
 
       <form @submit.prevent="handleLogin">
         <!-- Email -->
         <div class="mb-4">
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-1"> Email </label>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
           <input
             type="email"
             id="email"
@@ -25,7 +24,7 @@
 
         <!-- Password -->
         <div class="mb-6">
-          <label for="password" class="block text-sm font-medium text-gray-700 mb-1"> Password </label>
+          <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
           <input
             type="password"
             id="password"
@@ -36,20 +35,19 @@
         </div>
 
         <!-- Submit Button -->
-        <BaseButton>
+        <BaseButton class="w-full py-2">
           Log In
         </BaseButton>
       </form>
 
-      <!-- Optional: Signup link -->
-      <p class="text-sm text-gray-600 mt-4 text-center">
+      <!-- Sign up link -->
+      <p class="text-sm text-gray-600 mt-6 text-center">
         Don’t have an account?
-        <a href="#" class="text-purple-600 hover:underline"> Sign up </a>
+        <a href="/signup" class="text-purple-600 hover:underline">Sign up</a>
       </p>
     </div>
   </div>
 </template>
-
 
 <script setup>
 import { ref } from 'vue'
@@ -59,8 +57,6 @@ const password = ref('')
 
 function handleLogin() {
   console.log('Logging in with', email.value, password.value)
-  // Add login logic here..
+  // Add login logic here
 }
 </script>
-
-

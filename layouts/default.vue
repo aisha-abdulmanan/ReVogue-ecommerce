@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- NAVIGATION BAR -->
-    <nav class="bg-purple-700 text-white px-6 py-4 shadow-md">
-      <div class="flex justify-between items-center text-lg font-semibold mx-4 sm:mx-6 lg:mx-10">
+    <nav class="bg-purple-700 text-white px-2 py-4 shadow-md">
+      <div class="flex justify-between items-center text-lg font-semibold mx-4 sm:mx-6 lg:mx-6">
         
         <!-- Left side nav links -->
         <ul class="flex gap-6">
