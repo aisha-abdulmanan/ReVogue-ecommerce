@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/aisha-abdulmanan/FRONTEND/issues"
   },
-  "homepage": "https://github.com/aisha-abdulmanan/FRONTEND#readme"
+  "homepage": "https://github.com/aisha-abdulmanan/FRONTEND#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.2",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.3"
+  }
 }
