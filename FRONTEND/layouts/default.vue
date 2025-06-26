@@ -24,7 +24,7 @@
     </nav>
 
     <!-- Main content -->
-    <main class="px-4 py-8">
+    <main>
       <NuxtRouteAnnouncer />
       <NuxtPage />
     </main>
