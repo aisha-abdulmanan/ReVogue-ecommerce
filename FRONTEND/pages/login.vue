@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen flex items-center justify-center px-4">
-    
     <!-- Login Card -->
     <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-sm">
       <h1 class="text-4xl font-bold text-purple-800 text-center mb-2">👤 Login </h1>
@@ -16,9 +15,17 @@
             type="email"
             id="email"
             v-model="email"
-            required
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            @input="validateEmail"
+            placeholder="e.g. user@example.com"
+            class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
+            :class="{
+              'border-red-500 focus:ring-red-500': !isEmailValid && email,
+              'border-gray-300 focus:ring-purple-500': isEmailValid || !email
+            }"
           />
+          <p v-if="!isEmailValid && email" class="text-sm text-red-500 mt-1">
+            Please enter a valid email address.
+          </p>
         </div>
 
         <!-- Password -->
@@ -28,13 +35,21 @@
             type="password"
             id="password"
             v-model="password"
-            required
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            @input="validatePassword"
+            placeholder="At least 6 characters"
+            class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
+            :class="{
+              'border-red-500 focus:ring-red-500': !isPasswordValid && password,
+              'border-gray-300 focus:ring-purple-500': isPasswordValid || !password
+            }"
           />
+          <p v-if="!isPasswordValid && password" class="text-sm text-red-500 mt-1">
+            Password must be at least 6 characters.
+          </p>
         </div>
 
         <!-- Submit Button -->
-        <BaseButton class="w-full py-2">
+        <BaseButton class="w-full py-2" :disabled="!isEmailValid || !isPasswordValid">
           Log In
         </BaseButton>
       </form>
@@ -48,14 +63,35 @@
   </div>
 </template>
 
+
+
 <script setup>
 import { ref } from 'vue'
 
 const email = ref('')
 const password = ref('')
+const isEmailValid = ref(true)
+const isPasswordValid = ref(true)
+
+function validateEmail() {
+  // Basic email pattern
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  isEmailValid.value = emailPattern.test(email.value)
+}
+
+function validatePassword() {
+  isPasswordValid.value = password.value.length >= 6
+}
 
 function handleLogin() {
+  validateEmail()
+  validatePassword()
+
+  if (!isEmailValid.value || !isPasswordValid.value) return
+
   console.log('Logging in with', email.value, password.value)
   // Add login logic here
 }
 </script>
+
+

@@ -25,9 +25,17 @@
               'border-gray-300 focus:ring-purple-500': isValid || !number
             }"
           />
-          <p v-if="!isValid && number" class="text-sm text-red-500 mt-1">
+
+          <!-- Letter warning -->
+          <p v-if="hasLetters" class="text-sm text-red-500 mt-1">
+            Letters are not allowed.
+          </p>
+        
+          <!-- Invalid phone number warning -->
+          <p v-else-if="!isValid && number" class="text-sm text-red-500 mt-1">
             Please enter a valid 11-digit phone number.
           </p>
+    
         </div>
 
         <!-- Next Button -->
@@ -45,17 +53,25 @@
   </div>
 </template>
 
+
+
 <script setup>
 import { ref } from 'vue'
 
 const number = ref('')
 const isValid = ref(true)
+const hasLetters = ref(false)
 
 function validateNumber(event) {
-  // Keep only digits
-  number.value = event.target.value.replace(/\D/g, '')
+  const raw_input = event.target.value
 
-  // Validate: must be exactly 11 digits (Philippines mobile format)
+  // Check if there are any letters (case-insensitive)
+  hasLetters.value = /[a-z]/i.test(raw_input)
+
+  // Clean input: keep only digits
+  number.value = raw_input.replace(/\D/g, '')
+
+  // Validate 11-digit Philippine number
   isValid.value = /^09\d{9}$/.test(number.value)
 }
 
