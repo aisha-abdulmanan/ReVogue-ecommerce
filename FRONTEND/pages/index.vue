@@ -1,7 +1,7 @@
 <template>
 
   <!-- Home Page -->
-  <div class="min-h-screen bg-purple-100 flex items-center justify-center">
+  <div class="min-h-screen flex items-center justify-center">
     <div class="text-center">
       <!-- Big and bold heading -->
       <p class="text-7xl font-extrabold text-purple-900 mb-6"> 🛍️ ReVogue </p>

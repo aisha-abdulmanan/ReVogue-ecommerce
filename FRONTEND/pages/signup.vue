@@ -1,6 +1,6 @@
 <template>
-  <!-- Fullscreen background -->
-  <div class="min-h-screen bg-purple-100 flex items-center justify-center px-4">
+ 
+  <div class="min-h-screen flex items-center justify-center px-4">
     <!-- SignUp Card -->
     <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-sm">
       <h1 class="text-4xl font-bold text-purple-800 text-center mb-2">👤 SignUp </h1>

@@ -1,6 +1,5 @@
 <template>
-  <!-- Fullscreen background -->
-  <div class="min-h-screen bg-purple-100 flex items-center justify-center px-4">
+  <div class="min-h-screen flex items-center justify-center px-4">
     
     <!-- Login Card -->
     <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-sm">
