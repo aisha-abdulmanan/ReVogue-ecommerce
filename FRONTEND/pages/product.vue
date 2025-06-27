@@ -11,7 +11,8 @@
       <div
         v-for="product in products"
         :key="product.id"
-        class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center"
+        class="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center 
+        hover:scale-[1.02] hover:-translate-y-1 transition-transform duration-200"
       >
         <!-- Product Image -->
         <img
@@ -46,6 +47,8 @@
     </div>
   </div>
 </template>
+
+
 
 <script setup>
 import { ref } from 'vue'
