@@ -13,6 +13,7 @@
 
     <!-- Loop through stores -->
     <div v-for="(items, store) in groupedCart" :key="store" class="bg-white rounded-xl shadow p-4 mb-6">
+      
       <!-- Store Name -->
       <div class="border-b border-purple-200 pb-2 mb-4">
         <h2 class="text-xl font-semibold text-purple-700">🏬 {{ store }}</h2>
@@ -39,17 +40,17 @@
         <p class="hidden sm:block text-sm text-gray-700 text-center">₱{{ item.price.toFixed(2) }}</p>
 
         <!-- Quantity Controls -->
-        <div class="flex items-center justify-center gap-2">
+        <div class="flex items-center justify-center gap-2 ml-2">
           <button @click="decreaseQty(item)" class="px-2 py-1 bg-purple-100 rounded hover:bg-purple-200">−</button>
           <span class="min-w-[24px] text-center">{{ item.quantity }}</span>
           <button @click="increaseQty(item)" class="px-2 py-1 bg-purple-100 rounded hover:bg-purple-200">+</button>
         </div>
 
         <!-- Total Price -->
-        <p class="text-sm font-semibold text-gray-800 text-center ml-2">₱{{ (item.price * item.quantity).toFixed(2) }}</p>
+        <p class="text-sm font-semibold text-gray-800 text-center ml-5">₱{{ (item.price * item.quantity).toFixed(2) }}</p>
 
         <!-- Action -->
-        <div class="flex justify-center items-center ml-3">
+        <div class="flex justify-center items-center ml-5">
           <button
             @click="removeItem(item)"
             class="hover:text-red-600 flex flex-col items-center"
@@ -67,8 +68,17 @@
     </div>
 
     <!-- Empty Cart Message -->
+    <!-- Empty Cart Message -->
     <div v-if="!cartItems.length" class="text-center text-gray-500 mt-20">
-      <p>Your cart is empty. 🧺</p>
+      <p class="text-2xl font-semibold text-gray-700 mb-4">🧺 Your cart is empty!</p>
+      <p class="mb-6 text-lg">Looks like you haven't added anything yet.</p>
+    
+      <NuxtLink
+        to="/product"
+        class="inline-block bg-purple-700 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-purple-800 transition"
+      >
+        Shop Now
+      </NuxtLink>
     </div>
 
 
