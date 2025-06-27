@@ -56,28 +56,28 @@ const products = ref([
     name: 'Vintage Denim Jacket',
     price: 750,
     description: 'A classic oversized denim piece.',
-    image: '/images/d-jacket-1'
+    image: '/images/d-jacket-1.jpg'
   },
   {
     id: 2,
     name: 'Retro Floral Dress',
     price: 650,
     description: 'Chic and breezy — perfect for sunny days.',
-    image: '/images/floral-dress-2'
+    image: '/images/floral-dress-2.jpg'
   },
   {
     id: 3,
     name: 'Graphic Tee',
     price: 300,
     description: 'Comfortable cotton tee with vintage print.',
-    image: '/images/graphic-tee-1'
+    image: '/images/graphic-tee-1.jpg'
   },
   {
     id: 4,
     name: 'Corduroy Pants',
     price: 550,
     description: 'Earth-tone bottoms with a relaxed fit.',
-    image: '/images/pants'
+    image: '/images/pants.jpg'
   },
 
 ])
