@@ -1,17 +1,23 @@
 const express = require('express');
-const PORT = process.env.PORT || 3001;
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Backend is running!');
-});
+const db = require('./models');
+const cartRoutes = require('./routes/cart');
 
-app.get('/json', (req, res) => {
-  res.json({message:'Backend is running!'});
+app.use(express.json());
+app.use('/api/cart', cartRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Welcome to E-commerce backend!');
 });
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
+
+
+
+
