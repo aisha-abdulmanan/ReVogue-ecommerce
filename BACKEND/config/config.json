@@ -1,10 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "u7sx6u3q5cp4svrabdf7",
+    "password": "CFMrJuo3xw30PLDtHyp0pwqWehbLLG",
+    "database": "bxkpac1rd4bmtntu67q8",
+    "host": "bxkpac1rd4bmtntu67q8-postgresql.services.clever-cloud.com",
+    "dialect": "postgres",
+    "port": "50013"
   },
   "test": {
     "username": "root",
@@ -21,3 +22,4 @@
     "dialect": "mysql"
   }
 }
+
