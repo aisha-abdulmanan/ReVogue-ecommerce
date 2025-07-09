@@ -1,6 +1,9 @@
+//Combines all paths and schemas manually into a JSON object
+
+const PORT = 3001;
 const cartPaths = require('./cart.swagger');
+const userPaths = require('./user.swagger');
 const schemas = require('./schemas');
-const PORT = process.env.PORT || 3001;
 
 module.exports = {
   openapi: '3.0.0',
@@ -12,12 +15,13 @@ module.exports = {
   servers: [{ url: `http://localhost:${PORT}` }],
   paths: {
     ...cartPaths,
+    ...userPaths,
     // ...otherPaths
   },
   components: {
     schemas: {
       ...schemas,
-      // ...otherSchemasfolder
+      // ...otherSchemasfolder (if any)
     }
   }
 };

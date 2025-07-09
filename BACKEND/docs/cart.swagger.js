@@ -13,9 +13,7 @@ module.exports = {
         }
       ],
       responses: {
-        201: {
-          description: 'Created'
-        }
+        201: { description: 'Created' }
       }
     }
   },
@@ -53,15 +51,9 @@ module.exports = {
         }
       ],
       responses: {
-        200: {
-          description: 'Item deleted successfully'
-        },
-        404: {
-        description: 'Cart item not found'
-        },
-        500: {
-          description: 'Internal server error'
-        }
+        200: { description: 'Item deleted successfully' },
+        404: { description: 'Cart item not found' },
+        500: { description: 'Internal server error'}
       }
     }
   }
