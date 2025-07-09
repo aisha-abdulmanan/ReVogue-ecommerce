@@ -1,8 +1,7 @@
 //Combines all paths and schemas manually into a JSON object
 
 const PORT = 3001;
-const cartPaths = require('./cart.swagger');
-const userPaths = require('./user.swagger');
+const routeDocs = require('./routes');     // This auto-merges your paths
 const schemas = require('./schemas');
 
 module.exports = {
@@ -13,11 +12,7 @@ module.exports = {
     description: 'Auto-documented routes from external files',
   },
   servers: [{ url: `http://localhost:${PORT}` }],
-  paths: {
-    ...cartPaths,
-    ...userPaths,
-    // ...otherPaths
-  },
+  paths: routeDocs,
   components: {
     schemas: {
       ...schemas,
