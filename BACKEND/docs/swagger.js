@@ -17,8 +17,16 @@ module.exports = {
     schemas: {
       ...schemas,
       // ...otherSchemasfolder (if any)
-    }
-  }
+    },
+    securitySchemes: {
+      bearerAuth: {
+        type: 'http',
+        scheme: 'bearer',
+        bearerFormat: 'JWT',
+      },
+    },
+  },
+  security: [{ bearerAuth: [] }], // <- apply globally or per endpoint
 };
 
 
