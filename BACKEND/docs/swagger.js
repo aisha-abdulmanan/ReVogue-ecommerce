@@ -26,7 +26,7 @@ module.exports = {
       },
     },
   },
-  security: [{ bearerAuth: [] }], // <- apply globally or per endpoint
+  //security: [{ bearerAuth: [] }], // <- apply globally or per endpoint
 };
 
 
