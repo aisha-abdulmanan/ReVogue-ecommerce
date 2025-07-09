@@ -15,10 +15,12 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 const db = require('./models');
 
 // Routes dependencies
+const authRoutes = require('./routes/auth.route');
 const userRoutes = require('./routes/user');
 const cartRoutes = require('./routes/cart');
 
 // Routes
+app.use('/auth', authRoutes);
 app.use('/users', userRoutes);
 app.use('/api/cart', cartRoutes);
 
