@@ -5,14 +5,7 @@ module.exports = {
       tags: ['Users'],
       security: [{ bearerAuth: [] }],
       responses: {
-        200: {
-          description: 'User profile returned',
-          content: {
-            'application/json': {
-              schema: { $ref: '#/components/schemas/User' },
-            },
-          },
-        },
+        200: { description: 'User profile returned successfully' },
         401: { description: 'Unauthorized' },
         403: { description: 'Forbidden' },
       },
