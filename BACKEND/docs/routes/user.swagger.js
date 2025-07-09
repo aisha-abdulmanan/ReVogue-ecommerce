@@ -1,4 +1,23 @@
 module.exports = {
+  '/users/profile': {
+    get: {
+      summary: 'Get your profile',
+      tags: ['Users'],
+      security: [{ bearerAuth: [] }],
+      responses: {
+        200: {
+          description: 'User profile returned',
+          content: {
+            'application/json': {
+              schema: { $ref: '#/components/schemas/User' },
+            },
+          },
+        },
+        401: { description: 'Unauthorized' },
+        403: { description: 'Forbidden' },
+      },
+    },
+  },
   '/users': {
     get: {
       summary: 'Get all users',
@@ -25,8 +44,9 @@ module.exports = {
   },
   '/users/{id}': {
     delete: {
-      summary: 'Delete a user by ID',
+      summary: 'Delete a user by ID (admin only)',
       tags: ['Users'],
+      security: [{ bearerAuth: [] }],
       parameters: [
         {
           in: 'path',
@@ -38,6 +58,7 @@ module.exports = {
       ],
       responses: {
         200: { description: 'User deleted successfully' },
+        403: { description: 'Forbidden' },
         404: { description: 'User not found' }
       },
     },
