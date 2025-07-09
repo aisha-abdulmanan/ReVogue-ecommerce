@@ -6,28 +6,8 @@ app.use(express.json());
 
 
 // 📦 Swagger dependencies
-const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
-
-// 📚 Swagger setup
-const swaggerOptions = {
-  definition: {
-    openapi: '3.0.0',
-    info: {
-      title: 'E-commerce API',
-      version: '1.0.0',
-      description: 'Documentation for E-commerce backend APIs',
-    },
-    servers: [
-      {
-        url: `http://localhost:${PORT}`,
-      },
-    ],
-  },
-  apis: ['./routes/*.js'], // 👈 Adjust if you have other route folders
-};
-
-const swaggerSpec = swaggerJsdoc(swaggerOptions);
+const swaggerSpec = require('./docs/swagger');
 
 // ✅ Swagger route (this must come BEFORE your other routes!)
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
